@@ -6,22 +6,22 @@ The conversion part is based on the [svg2png](https://github.com/domenic/svg2png
 
 ## Usage
 
-```shell
+```bash
 > svgreindeer [input_dir] [output_dir]
 
-    // custom scaling
+    # custom scaling
 > svgreindeer [input_dir] [output_dir] -s [scale|0.1÷4]
 
-    // custom style
+    # custom style
 > svgreindeer [input_dir] [output_dir] --style='* { fill: chocolate; }'
 ```
 
 
 ## Config
 
-Place a *svgreindeer.yml* within your EXECUTION folder.
+Place a **svgreindeer.yml** within your EXECUTION folder.
 
-```
+```yaml
 input_dir: [input_dir]
 output_dir: [output_dir]
 scale: [scale|0.1÷4]
@@ -36,7 +36,7 @@ Feel free to hide your config file by adding a . in front of the filename.
 ## Custom styles
 
 You can set a global custom style that is injected into the svg before rendering.
-Additionally you can specify a **[FOLDER_NAME].css** or **[FILE_NAME].svg.css** file.
+Additionally you can specify a **FOLDER_NAME.css** or **FILE_NAME.svg.css** file.
 
 example:
 ```
