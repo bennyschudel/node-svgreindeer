@@ -1,0 +1,59 @@
+#!/usr/bin/env node
+
+var coa = require('coa');
+
+var pkg         = require('../package.json');
+var SvgReindeer = require('../lib/svgreindeer');
+
+var log = console.log;
+
+
+require('coa').Cmd()
+	.helpful()
+	.name(pkg.name)
+	.title(pkg.description)
+	.opt()
+		.name('version').title('Version')
+		.short('v').long('version')
+		.only()
+		.flag()
+		.act(function() {
+			return pkg.version;
+		})
+		.end()
+	.arg()
+		.name('input_dir').title('Input dir containing your SVG\'s')
+		.end()
+	.arg()
+		.name('output_dir').title('Output dir where your PNG\'s will be stored')
+		.end()
+	.opt()
+		.name('scale').title('Scale factor')
+		.short('s').long('scale')
+		.val(function(value) {
+			return Math.min(Math.max(value, 0.1), 4);
+		})
+		.end()
+	.opt()
+		.name('style').title('Custom css styles')
+		.long('style')
+		.end()
+	.opt()
+		.name('silent').title('Silence output')
+		.long('silent')
+		.flag()
+		.end()
+	.act(function(opts, args) {
+
+		var svg_reindeer = new SvgReindeer({
+			input_dir  : args.input_dir,
+			output_dir : args.output_dir,
+			scale      : opts.scale,
+			style      : opts.style,
+			verbose    : !opts.silent,
+		});
+
+		svg_reindeer.run();
+
+	})
+	.run();
