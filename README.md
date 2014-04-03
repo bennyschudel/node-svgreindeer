@@ -9,10 +9,10 @@ The conversion part is based on the [svg2png](https://github.com/domenic/svg2png
 ```bash
 > svgreindeer [input_dir] [output_dir]
 
-    # custom scaling
+  # custom scaling
 > svgreindeer [input_dir] [output_dir] -s [scale|0.1÷4]
 
-    # custom style
+  # custom style
 > svgreindeer [input_dir] [output_dir] --style='* { fill: chocolate; }'
 ```
 
@@ -51,7 +51,9 @@ example:
 ```
 
 
-## Author
+## About
 
-02.04.2014
-Benny Schudel (@benny)
+Feedback welcome! Contact me [@bennyschudel](https://github.com/bennyschudel) or follow me on [twitter](http://twitter.com/bennyschudel).
+
+
+Copyright (c) 2014 Benny Schudel - [MIT-License](https://raw.github.com/bennyschudel/node-svgmule/master/LICENSE)
