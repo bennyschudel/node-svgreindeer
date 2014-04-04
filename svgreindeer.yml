@@ -1,4 +1,4 @@
-varbose: true
+verbose: true
 input_dir: examples/icons/
 output_dir: _build/
 scale: 1
