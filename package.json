@@ -1,8 +1,26 @@
 {
   "name": "svgreindeer",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "Renders SVG's to PNG's for a fallback in older IE's and email clients.",
+  "keywords": [
+    "svg",
+    "png",
+    "render"
+  ],
+  "homepage": "http://bennyschudel.github.com/node-svgreindeer/",
+  "author": {
+    "name": "Benny Schudel",
+    "email": "bennyschudel@gmail.com",
+    "url": "http://benjaminschudel.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bennyschudel/node-svgreindeer/node-svgreindeer.git"
+  },
   "main": "./lib/svgreindeer.js",
+  "bugs": {
+    "url": "https://github.com/bennyschudel/node-svgreindeer/issues"
+  },
   "bin": {
     "svgreindeer": "./bin/svgreindeer"
   },
@@ -10,8 +28,6 @@
     "bin": "./bin",
     "lib": "./lib"
   },
-  "author": "Benny Schudel <bennyschudel@gmail.com>",
-  "license": "MIT",
   "dependencies": {
     "coa": "^0.4.0",
     "colors": "^0.6.2",
@@ -21,10 +37,17 @@
     "lodash": "^2.4.1",
     "mkdirp": "^0.3.5",
     "moment": "^2.5.1",
+    "phantomjs": "^1.9.7-3",
     "q": "^1.0.1",
     "which": "^1.0.5"
   },
   "engines": {
     "node": ">=0.8.0"
-  }
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://raw.github.com/bennyschudel/node-svgmule/master/LICENSE"
+    }
+  ]
 }
