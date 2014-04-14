@@ -1,6 +1,6 @@
 {
   "name": "svgreindeer",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "description": "Renders SVG's to PNG's for a fallback in older IE's and email clients.",
   "keywords": [
     "svg",
