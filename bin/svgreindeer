@@ -22,10 +22,16 @@ require('coa').Cmd()
 		})
 		.end()
 	.arg()
-		.name('input_dir').title('Input dir containing your SVG\'s')
+		.name('input_src').title('Source glob pattern matching your SVG\'s')
+		.arr()
 		.end()
-	.arg()
-		.name('output_dir').title('Output dir where your PNG\'s will be stored')
+	.opt()
+		.name('output_dir').title('Output dir where the PNG\'s will be stored')
+		.short('o').long('output_dir')
+		.end()
+	.opt()
+		.name('base_dir').title('Sets the base dir that is omitted in the output')
+		.short('b').long('base_dir')
 		.end()
 	.opt()
 		.name('scale').title('Scale factor')
@@ -46,8 +52,9 @@ require('coa').Cmd()
 	.act(function(opts, args) {
 
 		var svg_reindeer = new SvgReindeer({
-			input_dir  : args.input_dir,
-			output_dir : args.output_dir,
+			input_src  : args.input_src,
+			output_dir : opts.output_dir,
+			base_dir   : opts.base_dir,
 			scale      : opts.scale,
 			style      : opts.style,
 			verbose    : !opts.silent,

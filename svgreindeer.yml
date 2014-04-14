@@ -1,6 +1,7 @@
 verbose: true
-input_dir: examples/icons/
+input_src: examples/icons/**/*.svg
 output_dir: _build/
+base_dir: examples/icons/
 scale: 1
 style: |
   * { fill: hotpink; }

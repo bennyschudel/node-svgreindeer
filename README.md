@@ -7,13 +7,16 @@ The conversion part is based on the [svg2png](https://github.com/domenic/svg2png
 ## Usage
 
 ```bash
-> svgreindeer [input_dir] [output_dir]
+> svgreindeer [input_src] -o [output_dir]
 
   # custom scaling
-> svgreindeer [input_dir] [output_dir] -s [scale|0.1÷4]
+> svgreindeer [input_src] -o [output_dir] -s [scale|0.1÷4]
+
+  # remove base dir from output
+> svgreindeer [input_src] -o [output_dir] -b [base_dir] -s [scale|0.1÷4]
 
   # custom style
-> svgreindeer [input_dir] [output_dir] --style='* { fill: chocolate; }'
+> svgreindeer [input_src] -o [output_dir] --style='* { fill: chocolate; }'
 ```
 
 
@@ -22,12 +25,13 @@ The conversion part is based on the [svg2png](https://github.com/domenic/svg2png
 Place a **svgreindeer.yml** within your EXECUTION folder.
 
 ```yaml
-input_dir: [input_dir]
+verbose: true
+input_src: [input_src]
 output_dir: [output_dir]
+base_dir: [base_dir]
 scale: [scale|0.1÷4]
 style: |
   * { fill: chocolate; }
-verbose: true
 ```
 
 Feel free to hide your config file by adding a . in front of the filename.
